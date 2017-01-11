@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: NESOY
@@ -19,5 +20,15 @@
     <li> E-mail: ${customer.email} </li>
 </ul>
 
+<%-- JSTL --%>
+<table style="border: 1px solid red; padding: 10px;">
+<c:forEach var="customer" items="${customerList}">
+<tr>
+    <td>${customer.id}</td>
+    <td>${customer.name}</td>
+    <td>${customer.email}</td>
+</tr>
+</c:forEach>
+</table>
 </body>
 </html>
